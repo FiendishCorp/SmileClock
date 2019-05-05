@@ -23,7 +23,7 @@ public class SmileWorldClockModel: NSObject, NSCoding {
     }
     
     //MARK: Property
-    var timer: NSTimer?
+    var timer: Timer?
     public var selectedTimeZones = [SmileTimeZoneData]()
     var delegate: SmileWorldClockModelDelegate!
     

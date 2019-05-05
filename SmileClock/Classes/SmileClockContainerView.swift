@@ -10,11 +10,11 @@ import UIKit
 
 @IBDesignable public class SmileClockContainerView: UIView {
 
-    @IBInspectable public var bgColor: UIColor = UIColor.blackColor()
-    @IBInspectable public var graduationColor: UIColor = UIColor.whiteColor()
-    @IBInspectable public var fontColor: UIColor = UIColor.whiteColor()
-    @IBInspectable public var handColor: UIColor = UIColor.whiteColor()
-    @IBInspectable public var secHandColor: UIColor = UIColor.yellowColor()
+    @IBInspectable public var bgColor: UIColor = UIColor.black
+    @IBInspectable public var graduationColor: UIColor = UIColor.white
+    @IBInspectable public var fontColor: UIColor = UIColor.white
+    @IBInspectable public var handColor: UIColor = UIColor.white
+    @IBInspectable public var secHandColor: UIColor = UIColor.yellow
     @IBInspectable public var clockStyleNum: Int = 3
     @IBInspectable public var hour: Int = 9
     @IBInspectable public var minute: Int = 30
@@ -45,7 +45,7 @@ import UIKit
     }
     
     private func addClockView() {
-        self.backgroundColor = UIColor.clearColor()
+        self.backgroundColor = UIColor.clear
         clockView = SmileClockView(frame: self.bounds)
         
         clockView.clockStyle = safeSetClockStyle(clockStyleNum)

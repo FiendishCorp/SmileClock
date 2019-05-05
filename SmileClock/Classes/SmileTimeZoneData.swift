@@ -103,7 +103,7 @@ public class SmileTimeZoneData: NSObject, NSCoding {
         dayDate = String(zoneComponents.day)
     
         //set offset From Local TimeZone
-        let secondsBetweenZones: NSTimeInterval = Double(timeZone.secondsFromGMT - localTimeZone.secondsFromGMT)
+        let secondsBetweenZones: TimeInterval = Double(timeZone.secondsFromGMT - localTimeZone.secondsFromGMT)
         let hoursBetweenZones = secondsBetweenZones / 60 * 60
         var hourOffset: String?
         var dayOffset: String?
@@ -139,6 +139,6 @@ public class SmileTimeZoneData: NSObject, NSCoding {
     
     //MARK: Debug
     func debugLog(){
-        print("\(timeZone.name) - \(timeZone.description) - \(timeZone.localizedName(NSTimeZoneNameStyle.Standard, locale: NSLocale.currentLocale())) - \(timeZone.localizedName(NSTimeZoneNameStyle.ShortStandard, locale: NSLocale.currentLocale())))")
+        print("\(timeZone.name) - \(timeZone.description) - \(timeZone.localizedName(NSTimeZone.NameStyle.Standard, locale: NSLocale.currentLocale())) - \(timeZone.localizedName(NSTimeZoneNameStyle.ShortStandard, locale: NSLocale.currentLocale())))")
     }
 }
